@@ -1,0 +1,33 @@
+1.     What is a result set?
+A set of rows of data, could be empty, returned by a select statement, or a stored procedure in RAM.
+
+2.     What is the difference between Union and Union All?
+Union removes duplicate records in the result set, union all does not.
+Union sorts the data based on the first  column in the first select statement.
+Union cannot be used inside a recursive CTE (Common Table Expressions) but union all can.
+
+3.     What are the other Set Operators SQL Server has?
+Intersect: Takes the data from both result sets which are in common.
+Except: Takes the data from the first result set, but not in the second.
+
+4.     What is the difference between Union and Join?
+Union concatenates two result sets with same columns, and Join combines columns from two tables based on specified join conditions into a result set.
+
+5.     What is the difference between INNER JOIN and FULL JOIN?
+When two tables inner join, the specified columns of the rows from both table must match the join conditions.
+When two tables outer join, depends on left, right, or full outer,
+the unmatched rows of the first table, second table, or both tables can appear in the result set,
+and the select list columns from the other table would be set to null.
+
+6.     What is difference between left join and outer join
+Left join includes all rows from left table, and when there is no matching rows from the right table, value of the select list columns would be null.
+Full outer join includes all rows from both table, and when there is no matching rows from either table, the value of the selected list of columns from the other table would be set to null.
+
+7.     What is cross join?
+Cross join returns the cartesian product of the sets of records from the two joined tables.
+
+8.     What is the difference between WHERE clause and HAVING clause?
+Where clasue determines whether a row qualifies before agrregation, and having clause determines whether a row with aggregated values is qualified.
+
+9.     Can there be multiple group by columns?
+A group by clause can contain multiple columns.
